@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://1pdvak0wquf3"]
+
+[ext_resource type="Script" uid="uid://ln0mwcwxtu6v" path="res://scripts/pipe_2.gd" id="1_qegal"]
+[ext_resource type="Texture2D" uid="uid://crufxrp2xwe4g" path="res://assets/Game Objects/pipe-green.png" id="2_mk06v"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_625hm"]
+size = Vector2(44, 319.5)
+
+[node name="Pipe2" type="Area2D" unique_id=2110100240]
+collision_mask = 2
+script = ExtResource("1_qegal")
+
+[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=72566301]
+position = Vector2(-1, -441)
+rotation = 3.1415925
+texture = ExtResource("2_mk06v")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="." unique_id=1066046122]
+position = Vector2(-1, -442.75)
+scale = Vector2(0.99999994, 0.99999994)
+shape = SubResource("RectangleShape2D_625hm")
+
+[node name="Pipe2Timer" type="Timer" parent="." unique_id=773788966]
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="timeout" from="Pipe2Timer" to="." method="_on_pipe_2_timer_timeout"]
