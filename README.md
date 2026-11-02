@@ -9,6 +9,7 @@ Flappy Bird Attempt 1 — A clone of Flappy Bird built using Godot & GDScript.
 ## How to Play
 Controls:
 - Spacebar / Left Click — Flap / Jump.
+
 Objective:
 - Fly through the pipes to get the highest score.
 
